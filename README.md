@@ -1,1 +1,1 @@
-# Spatial-Temporal-Attention-Network-for-POI-Recommendation
+# Spatial-Temporal-Attention-Network-for-Next-Location-Recommendation
