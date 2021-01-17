@@ -1,1 +1,1 @@
-# Spatial-Temporal-Attention-Network-for-Next-Location-Recommendation
+# STAN: Spatial-Temporal-Attention-Network-for-Next-Location-Recommendation
