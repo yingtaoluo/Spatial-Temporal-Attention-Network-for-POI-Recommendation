@@ -9,5 +9,5 @@ It would be my pleasure to answer your questions. Please do not hesitate to emai
 3) What is the environment to run the code? And version?  
 We use python 3.7.2 with CUDA 10.1 and PyTorch 1.7.1. Make sure to install all required libs that we import.  
 4) Are you open to cooperation?  
-I always welcome collaborations, although it is highly recommended to drop me a research proposal first. :}
+I always welcome collaborations, although it is highly recommended to drop me a research proposal or at least an ouline first. :}
 
