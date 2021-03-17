@@ -3,7 +3,7 @@ Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/
 
 Author Reply: 
 Thank you for your interest in our work! First I want to apologize for uploading the wrong files.   
-Please use the new .py files in this repository if you downloaded the wrong files. (Sorry!)
+Please use the new .py files in this repository if you downloaded the wrong files (before 3/18). (Sorry!)
 
 I have corrected this mistake and I summarize some FAQs:  
 1) Can you provide a dataset?  
