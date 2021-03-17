@@ -2,9 +2,9 @@
 Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/2102.04095
 
 Author Reply: 
-Thank you for your interest in our work! First I want to apologize for uploading the wrong files. I have corrected this.  
+Thank you for your interest in our work! First I want to apologize for uploading the wrong files. 
 
-I summarize some FAQs and wish you find them helpful:  
+I have corrected this mistake and I summarize some FAQs:  
 1) Can you provide a dataset?  
 We use datasets provided in the following links.  
 http://snap.stanford.edu/data/loc-gowalla.html;  
