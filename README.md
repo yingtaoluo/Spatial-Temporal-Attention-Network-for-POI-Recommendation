@@ -4,6 +4,7 @@ Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/
 Author Reply: 
 Thank you for your interest in our work! I summarize some FAQs:  
 1) Can you provide a dataset?  
+Github does not support large file. We use datasets provided in the following links.
 http://snap.stanford.edu/data/loc-gowalla.html;  
 https://personal.ntu.edu.sg/404.html;   
 http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip
