@@ -2,7 +2,7 @@
 Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/2102.04095
 
 Author Reply: 
-Thank you for your interest in our work! First I want to apologize for uploading the wrong files. It was an trial version STAN, but the one we report in paper. I have corrected this.  
+Thank you for your interest in our work! First I want to apologize for uploading the wrong files. I have corrected this.  
 
 I summarize some FAQs and wish you find them helpful:  
 1) Can you provide a dataset?  
