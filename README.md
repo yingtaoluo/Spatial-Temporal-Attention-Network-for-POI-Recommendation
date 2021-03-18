@@ -24,6 +24,6 @@ Q4: What is the environment to run the code? And version?
 A4: We use python 3.7.2 with CUDA 10.1 and PyTorch 1.7.1. Make sure to install all required libs that we import.  
 
 Q5: Are you open to cooperation?  
-A5: I always welcome collaborations, although it is highly recommended to drop me an outline of research proposal first. :}
+A5: I always welcome collaborations, although it is highly recommended to drop me an outline of research proposal.
 
 Could you consider starring this project to inspire the author? :}
