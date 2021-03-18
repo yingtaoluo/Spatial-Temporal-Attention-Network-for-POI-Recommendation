@@ -7,7 +7,7 @@ Please use the new .py files in this repository if you downloaded the wrong file
 
 I have corrected this mistake and I summarize some FAQs:  
 Q1: Can you provide a dataset?  
-A1: Data is already uploaded in this repository. You will be able to run the code with the data without smoothly. If not, let me know.
+A1: Data is already uploaded in this repository. You will be able to run the code with the data smoothly. If not, let me know.
 
 It is again important to point out that our datasets are collected from the following links.  
 http://snap.stanford.edu/data/loc-gowalla.html;  
