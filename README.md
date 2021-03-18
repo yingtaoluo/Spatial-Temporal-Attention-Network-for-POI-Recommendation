@@ -12,9 +12,11 @@ http://snap.stanford.edu/data/loc-gowalla.html;
 https://personal.ntu.edu.sg/404.html;   
 http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip
 2) I ran into some problems in reading the paper or inplementing the codes. May I talk/discuss with you?  
-It would be my pleasure to answer your questions. Please do not hesitate to email me or leave comments at any time and explain the problem concisely so I can assist. 
-3) What is the environment to run the code? And version?  
+It would be my pleasure to answer your questions. Please do not hesitate to email me or leave comments at any time and explain the problem concisely so I can assist.
+3）What does it mean "The number of training set is 𝑚 − 3, with the first 𝑚′ ∈ [1,𝑚 − 3] check-ins as input sequence and the [2,𝑚 − 2]-nd visited location as label"?  
+We use [1] as input to predict [2], use [1,2] as input to predict [3], and so on, until we use [1,...,m-3] to predict [m-2].
+4) What is the environment to run the code? And version?  
 We use python 3.7.2 with CUDA 10.1 and PyTorch 1.7.1. Make sure to install all required libs that we import.  
-4) Are you open to cooperation?  
+5) Are you open to cooperation?  
 I always welcome collaborations, although it is highly recommended to drop me an outline of research proposal first. :}
 
