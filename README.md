@@ -5,7 +5,7 @@ Author Reply:
 Thank you for your interest in our work! First I want to apologize for uploading the wrong files.   
 Please use the new .py files in this repository if you downloaded the wrong files (before 3/18). (Sorry!)
 
-I have corrected this mistake and I summarize some FAQs:  
+I have corrected this mistake and I summarize some FAQs:  
 Q1: Can you provide a dataset?  
 A1: Data is already uploaded to this repository. You will be able to run the code with the data smoothly. If not, let me know.  
   
