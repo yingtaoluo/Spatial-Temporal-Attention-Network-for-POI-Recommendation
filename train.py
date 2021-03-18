@@ -1,12 +1,11 @@
-from STAN_WIN.load import *
+# -*- coding: utf-8 -*
+
+from load import *
 import time
 from torch import optim
 import torch.utils.data as data
 from tqdm import tqdm
-from STAN_WIN.models import *
-
-os.chdir("C:\\Users\\罗颖涛\\PycharmProjects\\POI")
-# os.chdir("C:\\Users\\Administrator\\PycharmProjects\\POI")
+from models import *
 
 
 def calculate_acc(prob, label):
@@ -158,14 +157,13 @@ class Trainer:
                 torch.save({'state_dict': self.model.state_dict(),
                             'records': self.records,
                             'time': time.time() - start},
-                           'best_stan_win_' + dname + '.pth')
-
+                           'best_stan_' + dname + '.pth')
 
 
 if __name__ == '__main__':
     # load data
-    dname = 'NYC'
-    file = open('./data/' + dname + '_win_data.pkl', 'rb')
+    dname = 'TKY'
+    file = open('./data/' + dname + '_data.pkl', 'rb')
     file_data = joblib.load(file)
     # tensor(NUM, M, 3), np(NUM, M, M, 2), np(L, L), np(NUM, M, M), tensor(NUM, M), np(NUM)
     [trajs, mat1, mat2s, mat2t, labels, lens, u_max, l_max] = file_data
@@ -173,7 +171,7 @@ if __name__ == '__main__':
                                torch.FloatTensor(mat2t), torch.LongTensor(lens)
 
     # only use a partition of the data
-    part = 100
+    part = 1000
     trajs, mat1, mat2t, labels, lens = \
         trajs[:part], mat1[:part], mat2t[:part], labels[:part], lens[:part]
 
@@ -192,7 +190,7 @@ if __name__ == '__main__':
     load = False
 
     if load:
-        checkpoint = torch.load('best_stan_win_' + dname + '.pth')
+        checkpoint = torch.load('best_stan_' + dname + '.pth')
         stan.load_state_dict(checkpoint['state_dict'])
         start = time.time() - checkpoint['time']
         records = checkpoint['records']

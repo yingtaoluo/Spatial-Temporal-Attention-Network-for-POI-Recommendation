@@ -1,4 +1,4 @@
-from STAN_WIN.layers import *
+from layers import *
 
 
 class Model(nn.Module):

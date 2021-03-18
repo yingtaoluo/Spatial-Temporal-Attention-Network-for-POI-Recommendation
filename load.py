@@ -8,8 +8,6 @@ import matplotlib.pyplot as plt
 import joblib
 from torch.nn.utils.rnn import pad_sequence
 
-os.chdir("C:\\Users\\罗颖涛\\PycharmProjects\\POI")
-# os.chdir("C:\\Users\\Administrator\\PycharmProjects\\POI")
 max_len = 100  # max traj len; i.e., M
 
 
@@ -154,14 +152,14 @@ def process_traj(dname):  # start from 1
     labels = pad_sequence(labels, batch_first=True, padding_value=0)  # (NUM, M)
 
     data = [trajs, np.array(mat1), mat2s, np.array(mat2t), labels, np.array(lens), u_max, l_max]
-    data_pkl = './data/' + dname + '_win_data.pkl'
+    data_pkl = './data/' + dname + '_data.pkl'
     open(data_pkl, 'a')
     with open(data_pkl, 'wb') as pkl:
         joblib.dump(data, pkl)
 
 
 if __name__ == '__main__':
-    name = 'NYC'
-    create_poi(name)
-    create_data(name)
+    name = 'TKY'
+    # create_poi(name)
+    # create_data(name)
     process_traj(name)
