@@ -4,7 +4,6 @@ import os
 import pdb
 from math import radians, cos, sin, asin, sqrt
 import matplotlib.pyplot as plt
-# import pickle
 import joblib
 from torch.nn.utils.rnn import pad_sequence
 
@@ -16,7 +15,6 @@ def haversine(lon1, lat1, lon2, lat2):
     Calculate the great circle distance between two points
     on the earth (specified in decimal degrees)
     """
-    # 将十进制度数转化为弧度
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
 
     # haversine公式
