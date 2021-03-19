@@ -7,9 +7,7 @@ Please use the new .py files in this repository if you downloaded the wrong file
 
 I have corrected this mistake and I summarize some FAQs:  
 Q1: Can you provide a dataset?  
-A1: Data is already uploaded to this repository. You will be able to run the code with the data smoothly. If not, let me know.  
-  
-It is again important to point out that our datasets are collected from the following links.  
+A1: Our datasets are collected from the following links.  
 http://snap.stanford.edu/data/loc-gowalla.html;  
 https://personal.ntu.edu.sg/404.html;   
 http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip  
@@ -24,9 +22,6 @@ Q2.2: Can you please explain your trajectory encoding process? Do you create the
 A2.2: Pre-training of embedding is an effective approach and can further improve the performance for sure. Unfortunately, the focus and contribution of this paper are not on embedding pre-training but on spatio-temporal linear embedding, and pretraining is not used in baselines, so we do not use it in our paper. Nevertheless, it will be a contribution if you conceive new ideas to improve embedding efficiency.  
   
 Q3: What is the environment to run the code? And version?  
-A3: We use python 3.7.2 with CUDA 10.1 and PyTorch 1.7.1. Make sure to install all required libs that we import.  
-
-Q4: Are you open to cooperation?  
-A4: I always welcome collaborations. Please drop me an outline of your research proposal.  
+A3: We use python 3.7.2 with CUDA 10.1 and PyTorch 1.7.1. Make sure to install all required libs that we import. 
 
 Could you consider starring this project to inspire the author? :}  
