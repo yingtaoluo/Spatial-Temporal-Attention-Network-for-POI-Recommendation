@@ -5,6 +5,8 @@ Oral speech at the conference is coming soon! The 15min speech explains in more 
 Author Reply: 
 Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the wrong files (before 3/18). (Sorry!)
 
+![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/Cover.png)
+
 I summarize some FAQs:  
 Q1: Can you provide a dataset?  
 A1: Our datasets are collected from the following links.  
