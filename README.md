@@ -5,11 +5,11 @@ Author Reply:
 Thank you for your interest in our work! First I want to apologize for uploading the wrong files.   
 Please use the new .py files in this repository if you downloaded the wrong files (before 3/18). (Sorry!)
 
-I have corrected this mistake and I summarize some FAQs:  
+I summarize some FAQs:  
 Q1: Can you provide a dataset?  
 A1: Our datasets are collected from the following links.  
 http://snap.stanford.edu/data/loc-gowalla.html;  
-https://personal.ntu.edu.sg/404.html;   
+https://personal.ntu.edu.sg/404.html; (This link was fine in the past. I do not know when and why it closed.)   
 http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip  
   
 Q2: I ran into some problems in reading the paper or implementing the codes. May I talk/discuss with you?  
