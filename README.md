@@ -9,8 +9,7 @@ I summarize some FAQs:
 Q1: Can you provide a dataset?  
 A1: Our datasets are collected from the following links.  
 http://snap.stanford.edu/data/loc-gowalla.html;  
-https://www.ntu.edu.sg/home/gaocong/data/poidata.zip;  
-http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip  
+https://www.ntu.edu.sg/home/gaocong/data/poidata.zip; http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip  
   
 Q2: I ran into some problems in reading the paper or implementing the codes. May I talk/discuss with you?  
 A2: It would be my pleasure to answer your questions. Please do not hesitate to email me or leave comments at any time and explain the problem concisely so I can assist. Also, we will give an oral speech soon. Hope this helps resolve potential questions.  
