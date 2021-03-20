@@ -12,7 +12,7 @@ https://www.ntu.edu.sg/home/gaocong/data/poidata.zip; (This link was fine in the
 http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip  
   
 Q2: I ran into some problems in reading the paper or implementing the codes. May I talk/discuss with you?  
-A2: It would be my pleasure to answer your questions. Please do not hesitate to email me or leave comments at any time and explain the problem concisely so I can assist.  
+A2: It would be my pleasure to answer your questions. Please do not hesitate to email me or leave comments at any time and explain the problem concisely so I can assist. Also, we will give an oral speech soon. Hope this helps resolve potential questions.  
   
 Q2.1: What does it mean "The number of the training set is 𝑚 − 3, with the first 𝑚′ ∈ [1,𝑚 − 3] check-ins as input sequence and the [2,𝑚 − 2]-nd visited location as the label"?  
 A2.1: We use [1] as input to predict [2], use [1,2] as input to predict [3], and ..., until we use [1,...,m-3] to predict [m-2].  
