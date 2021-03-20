@@ -1,6 +1,6 @@
 # STAN: Spatial-Temporal-Attention-Network-for-Next-Location-Recommendation
 Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/2102.04095
-Oral speech at the conference is coming soon! The 5min speech explains in more details and with more figures. Feel free to download the PPT.
+Oral speech at the conference is coming soon! The 5min speech explains in more details and with more figures. Feel free to download the PPT as well.
 
 Author Reply: 
 Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the wrong files (before 3/18). (Sorry!)
