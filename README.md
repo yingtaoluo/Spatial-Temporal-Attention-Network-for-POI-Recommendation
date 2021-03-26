@@ -3,7 +3,7 @@ Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/
 Oral speech at the conference is coming soon! The 8min speech explains in more details and with more figures. 
 
 Author Reply: 
-Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the wrong files (before 3/18). (Sorry!)
+Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the wrong files (before March 18 2021). (Sorry!)
 
 ![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/Cover.png)
 
