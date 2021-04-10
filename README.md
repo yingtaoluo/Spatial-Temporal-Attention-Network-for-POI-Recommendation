@@ -24,6 +24,9 @@ A2.1: We use [1] as input to predict [2], use [1,2] as input to predict [3], and
   
 Q2.2: Can you please explain your trajectory encoding process? Do you create the location embeddings using skip-gram-like approaches?  
 A2.2: Pre-training of embedding is an effective approach and can further improve the performance for sure. Unfortunately, the focus and contribution of this paper are not on embedding pre-training but on spatio-temporal linear embedding, and pretraining is not used in baselines, so we do not use it in our paper. Nevertheless, it will be a contribution if you conceive new ideas to improve embedding efficiency.  
+
+Q2.3: Would it be better to construct edges based on spatio-temporal difference instead of directly feeding them into the model?
+A2.3: If the edges (the graph) can truly reflect the relations between each loaction and each user, then yes. Ideal 0-1 edge relation is a stronger representation. However, constructing edges merely based on spatial distances can raise problems. Consider the case where a 30-kilometer metro takes less time than a 5-kilometer walk. From the data, we know nothing about transportation.
   
 Q3: What is the environment to run the code? And version?  
 A3: We use python 3.7.2, CUDA 10.1 and PyTorch 1.7.1. Make sure to install all libs that we import.  
