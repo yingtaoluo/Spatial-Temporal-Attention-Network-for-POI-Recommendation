@@ -156,7 +156,7 @@ def process_traj(dname):  # start from 1
 
 
 if __name__ == '__main__':
-    name = 'TKY'
+    name = 'NYC'
     # create_poi(name)
     # create_data(name)
     process_traj(name)
