@@ -33,8 +33,8 @@ A2.2: Pre-training of embedding is an effective approach and can further improve
 Q2.3: Would it be better to construct edges based on spatial distances instead of using distances?  
 A2.3: If the edges (the graph) can truly reflect the relations between each loaction and each user, then yes. Ideal 0-1 edge relation is a stronger representation. However, constructing edges merely based on spatial distances can raise problems. Consider the case where a 30-kilometer metro takes less time than a 5-kilometer walk. From the data, we know nothing about transportation.  
 
-Q2.4: What do you mean by setting a unit spatioteporal embedding?
-A2.4: 
+Q2.4: What do you mean by setting a unit spatioteporal embedding?  
+A2.4: ![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/Cover.png)
 
 Q3: What is the environment to run the code? And version?  
 A3: We use python 3.7.2, CUDA 10.1 and PyTorch 1.7.1. Make sure to install all libs that we import.  
