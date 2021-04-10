@@ -3,7 +3,7 @@ Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/
 Oral speech at the conference is coming soon! The 8min speech explains in more details and with more figures. 
 
 Author Reply: 
-Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the wrong files (before March 18 2021). (Sorry!)
+Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the old files. (Sorry!)
 
 The running speed of STAN is extremely low. (We have a huge memory of the location matrix and a long sequence to learn) Try a proportion of users to test the performance. Increase the embed_dim accordingly if using more users.
 
