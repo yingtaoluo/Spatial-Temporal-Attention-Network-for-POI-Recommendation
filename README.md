@@ -7,13 +7,10 @@ Thank you for your interest in our work! I want to apologize for uploading the w
 
 The running speed of STAN is extremely low. (We have a huge memory of the location matrix and a long sequence to learn) Try a proportion of users to test the performance. Increase the embed_dim accordingly if using more users.
 
-You should see something on the screen like this:  
+You should see something on the screen like this:   
 100%|██████████| 100/100 [14:32<00:00,  8.72s/it]  
-epoch:14, time:12214.895842075348, valid_acc:[0.16 0.41 0.54 0.64]  
-epoch:14, time:12214.895842075348, test_acc:[0.16 0.43 0.59 0.65]  
-100%|██████████| 100/100 [14:32<00:00,  8.72s/it]  
-epoch:15, time:13087.08419084549, valid_acc:[0.19 0.45 0.58 0.67]  
-epoch:15, time:13087.08419084549, test_acc:[0.23 0.46 0.51 0.64]
+epoch:27, time:23587.941201210022, valid_acc:[0.18 0.49 0.56 0.67]  
+epoch:27, time:23587.941201210022, test_acc:[0.15 0.46 0.59 0.67]
 
 ![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/Cover.png)
 
