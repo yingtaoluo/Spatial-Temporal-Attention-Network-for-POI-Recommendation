@@ -5,9 +5,6 @@ import torch.utils.data as data
 from tqdm import tqdm
 from STAN_WIN.models import *
 
-os.chdir("C:\\Users\\罗颖涛\\PycharmProjects\\POI")
-# os.chdir("C:\\Users\\Administrator\\PycharmProjects\\POI")
-
 
 def calculate_acc(prob, label):
     # log_prob (N, L), label (N), batch_size [*M]
