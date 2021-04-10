@@ -1,11 +1,12 @@
-# -*- coding: utf-8 -*
-
-from load import *
+from STAN_WIN.load import *
 import time
 from torch import optim
 import torch.utils.data as data
 from tqdm import tqdm
-from models import *
+from STAN_WIN.models import *
+
+os.chdir("C:\\Users\\罗颖涛\\PycharmProjects\\POI")
+# os.chdir("C:\\Users\\Administrator\\PycharmProjects\\POI")
 
 
 def calculate_acc(prob, label):
@@ -157,27 +158,76 @@ class Trainer:
                 torch.save({'state_dict': self.model.state_dict(),
                             'records': self.records,
                             'time': time.time() - start},
-                           'best_stan_' + dname + '.pth')
+                           'best_stan_win_1000_' + dname + '.pth')
+
+    def inference(self):
+        user_ids = []
+        for t in range(self.num_epoch):
+            # settings or validation and test
+            valid_size, test_size = 0, 0
+            acc_valid, acc_test = [0, 0, 0, 0], [0, 0, 0, 0]
+            cum_valid, cum_test = [0, 0, 0, 0], [0, 0, 0, 0]
+
+            for step, item in enumerate(self.data_loader):
+                # get batch data, (N, M, 3), (N, M, M, 2), (N, M, M), (N, M), (N)
+                person_input, person_m1, person_m2t, person_label, person_traj_len = item
+
+                # first, try batch_size = 1 and mini_batch = 1
+
+                input_mask = torch.zeros((self.batch_size, max_len, 3), dtype=torch.long).to(device)
+                m1_mask = torch.zeros((self.batch_size, max_len, max_len, 2), dtype=torch.float32).to(device)
+                for mask_len in range(1, person_traj_len[0] + 1):  # from 1 -> len
+                    # if mask_len != person_traj_len[0]:
+                    #     continue
+                    input_mask[:, :mask_len] = 1.
+                    m1_mask[:, :mask_len, :mask_len] = 1.
+
+                    train_input = person_input * input_mask
+                    train_m1 = person_m1 * m1_mask
+                    train_m2t = person_m2t[:, mask_len - 1]
+                    train_label = person_label[:, mask_len - 1]  # (N)
+                    train_len = torch.zeros(size=(self.batch_size,), dtype=torch.long).to(device) + mask_len
+
+                    prob = self.model(train_input, train_m1, self.mat2s, train_m2t, train_len)  # (N, L)
+
+                    if mask_len <= person_traj_len[0] - 2:  # only training
+                        continue
+
+                    elif mask_len == person_traj_len[0] - 1:  # only validation
+                        acc_valid = calculate_acc(prob, train_label)
+                        cum_valid += calculate_acc(prob, train_label)
+
+                    elif mask_len == person_traj_len[0]:  # only test
+                        acc_test = calculate_acc(prob, train_label)
+                        cum_test += calculate_acc(prob, train_label)
+
+                print(step, acc_valid, acc_test)
+
+                if acc_valid.sum() == 0 and acc_test.sum() == 0:
+                    user_ids.append(step)
+
+            pdb.set_trace()
 
 
 if __name__ == '__main__':
     # load data
-    dname = 'TKY'
-    file = open('./data/' + dname + '_data.pkl', 'rb')
+    dname = 'NYC'
+    file = open('./data/' + dname + '_win_data.pkl', 'rb')
     file_data = joblib.load(file)
     # tensor(NUM, M, 3), np(NUM, M, M, 2), np(L, L), np(NUM, M, M), tensor(NUM, M), np(NUM)
     [trajs, mat1, mat2s, mat2t, labels, lens, u_max, l_max] = file_data
     mat1, mat2s, mat2t, lens = torch.FloatTensor(mat1), torch.FloatTensor(mat2s).to(device), \
                                torch.FloatTensor(mat2t), torch.LongTensor(lens)
 
-    # only use a partition of the data
-    part = 1000
+    # the run speed is very flow due to the use of location matrix (also huge memory cost)
+    # please use a partition of the data (recommended)
+    part = 100
     trajs, mat1, mat2t, labels, lens = \
         trajs[:part], mat1[:part], mat2t[:part], labels[:part], lens[:part]
 
     ex = mat1[:, :, :, 0].max(), mat1[:, :, :, 0].min(), mat1[:, :, :, 1].max(), mat1[:, :, :, 1].min()
 
-    stan = Model(t_dim=hours+1, l_dim=l_max+1, u_dim=u_max+1, embed_dim=10, ex=ex, dropout=0)
+    stan = Model(t_dim=hours+1, l_dim=l_max+1, u_dim=u_max+1, embed_dim=50, ex=ex, dropout=0)
     num_params = 0
 
     for name in stan.state_dict():
@@ -190,7 +240,7 @@ if __name__ == '__main__':
     load = False
 
     if load:
-        checkpoint = torch.load('best_stan_' + dname + '.pth')
+        checkpoint = torch.load('best_stan_win_' + dname + '.pth')
         stan.load_state_dict(checkpoint['state_dict'])
         start = time.time() - checkpoint['time']
         records = checkpoint['records']
@@ -200,3 +250,5 @@ if __name__ == '__main__':
 
     trainer = Trainer(stan, records)
     trainer.train()
+    # trainer.inference()
+

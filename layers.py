@@ -1,4 +1,4 @@
-from load import *
+from STAN_WIN.load import *
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -10,6 +10,7 @@ from torch.nn.utils.rnn import \
 import numpy as np
 import os
 import pdb
+import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -63,25 +64,6 @@ class SelfAttn(nn.Module):
 
         attn = torch.add(torch.bmm(self.query(joint), self.key(joint).transpose(-1, -2)), delta)  # (N, M, M)
         attn = F.softmax(attn, dim=-1) * mask  # (N, M, M)
-
-        '''
-        a = to_npy(attn[0])
-        print(a, a.shape)
-        fig, ax = plt.subplots(figsize=(9, 9))
-        # 二维的数组的热力图，横轴和数轴的ticklabels要加上去的话，既可以通过将array转换成有column
-        # 和index的DataFrame直接绘图生成，也可以后续再加上去。后面加上去的话，更灵活，包括可设置labels大小方向等。
-        sns.heatmap(pd.DataFrame(a),
-                    annot=False, vmax=1, vmin=0,  square=True, cmap="Blues")
-        # sns.heatmap(np.round(a,2), annot=True, vmax=1,vmin = 0, xticklabels= True, yticklabels= True,
-        #            square=True, cmap="YlGnBu")
-        # ax.set_title('二维数组热力图', fontsize = 18)
-        ax.set_ylabel('image', fontsize=18)
-        ax.set_xlabel('iamge', fontsize=18)  # 横变成y轴，跟矩阵原始的布局情况是一样的
-        plt.savefig('./out.png')
-        plt.show()
-        plt.close()
-        pdb.set_trace()
-        '''
 
         attn_out = torch.bmm(attn, self.value(joint))  # (N, M, emb)
 
