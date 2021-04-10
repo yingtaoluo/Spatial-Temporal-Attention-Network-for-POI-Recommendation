@@ -11,9 +11,9 @@ The running speed of STAN is extremely low. (We have a huge memory of the locati
 
 I summarize some FAQs:  
 Q1: Can you provide a dataset?  
-A1: Our datasets are collected from the following links.  
+A1: Our datasets are collected from the following links. Please feel free to do your own data processing on your model while comparing STAN as baseline.
 http://snap.stanford.edu/data/loc-gowalla.html;  
-https://www.ntu.edu.sg/home/gaocong/data/poidata.zip;  
+https://www.ntu.edu.sg/home/gaocong/data/poidata.zip; (Some people mention that this link is invalid, for reason I do not know neither. )
 http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip  
   
 Q2: I ran into some problems in reading the paper or implementing the codes. May I talk/discuss with you?  
