@@ -5,6 +5,8 @@ Oral speech at the conference is coming soon! The 8min speech explains in more d
 Author Reply: 
 Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the wrong files (before March 18 2021). (Sorry!)
 
+The running speed of STAN is extremely low. You can try a proportion of users to test the performance. Increase the embed_dim accordingly if using more users.
+
 ![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/Cover.png)
 
 I summarize some FAQs:  
