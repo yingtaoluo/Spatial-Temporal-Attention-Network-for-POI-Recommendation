@@ -31,7 +31,7 @@ Q2.2: Can you please explain your trajectory encoding process? Do you create the
 A2.2: Pre-training of embedding is an effective approach and can further improve the performance for sure. Unfortunately, the focus and contribution of this paper are not on embedding pre-training but on spatio-temporal linear embedding, and pretraining is not used in baselines, so we do not use it in our paper. Nevertheless, it will be a contribution if you conceive new ideas to improve embedding efficiency.  
 
 Q2.3: Would it be better to construct edges based on spatial distances instead of using distances?  
-A2.3: If the edges (the graph) can truly reflect the relations between each loaction and each user, then yes. Ideal 0-1 edge relation is a stronger representation. However, constructing edges merely based on spatial distances can raise problems. Consider the case where a 30-kilometer metro takes less time than a 5-kilometer walk. From the data, we know nothing about transportation.  
+A2.3: If the edges can truly reflect the relations between each loaction and each user, then yes. Ideal 0-1 edge relation is a stronger representation. However, constructing edges merely based on spatial distances can raise problems. Consider that a 30-kilometer metro takes less time than a 5-kilometer walk. From the data, we only know spatial distances.  
 
 Q2.4: What do you mean by setting a unit spatiotemporal embedding?  
 A2.4: ![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/unit_embedding.png)
