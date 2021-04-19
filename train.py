@@ -1,9 +1,10 @@
-from STAN_WIN.load import *
+from load import *
 import time
+import random
 from torch import optim
 import torch.utils.data as data
 from tqdm import tqdm
-from STAN_WIN.models import *
+from models import *
 
 
 def calculate_acc(prob, label):
@@ -203,13 +204,11 @@ class Trainer:
                 if acc_valid.sum() == 0 and acc_test.sum() == 0:
                     user_ids.append(step)
 
-            pdb.set_trace()
-
 
 if __name__ == '__main__':
     # load data
     dname = 'NYC'
-    file = open('./data/' + dname + '_win_data.pkl', 'rb')
+    file = open('./data/' + dname + '_data.pkl', 'rb')
     file_data = joblib.load(file)
     # tensor(NUM, M, 3), np(NUM, M, M, 2), np(L, L), np(NUM, M, M), tensor(NUM, M), np(NUM)
     [trajs, mat1, mat2s, mat2t, labels, lens, u_max, l_max] = file_data

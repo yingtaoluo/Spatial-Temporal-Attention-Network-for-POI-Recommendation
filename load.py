@@ -1,9 +1,6 @@
 import numpy as np
 import torch
-import os
-import pdb
 from math import radians, cos, sin, asin, sqrt
-import matplotlib.pyplot as plt
 import joblib
 from torch.nn.utils.rnn import pad_sequence
 
@@ -28,43 +25,6 @@ def haversine(lon1, lat1, lon2, lat2):
 def euclidean(point, each):
     lon1, lat1, lon2, lat2 = point[2], point[1], each[2], each[1]
     return np.sqrt((lon1 - lon2)**2 + (lat1 - lat2)**2)
-
-
-def create_poi(fname):
-    poi = []  # x: latitude, y: longitude
-    with open('./data/' + fname + '_POI.csv', 'r') as fp:
-        for i, line in enumerate(fp):
-            # ignore the headers
-            if i is 0:
-                continue
-
-            id, x, y = line.split(',')
-            y = y[:-1]
-            id, x, y = int(id), float(x), float(y)
-            poi.append([id, x, y])
-    poi.sort(key=lambda t: t[0])
-    poi = np.array(poi)
-    poi[:, 0] += 1  # start from 1
-    np.save('./data/' + fname + '_POI.npy', poi)
-
-
-def create_data(fname):
-    data = []
-    with open('./data/' + fname + '.csv', 'r') as fd:
-        for i, line in enumerate(fd):
-            # ignore the headers
-            if i is 0:
-                continue
-
-            c1, c2, c3 = line.split(',')
-            c3 = c3[:-1]
-            if fname == 'gowalla':  # (u, t, l)
-                data.append([int(c1), int(c3), int(c2)])
-            else:  # (u, l, t)
-                data.append([int(c1), int(c2), int(c3)])
-    data = np.array(data) + 1  # +1 to avoid 0 as padding
-    data = data[np.argsort(data[:, 0])]  # sort by user id
-    np.save('./data/' + fname + '.npy', data)
 
 
 def rst_mat1(traj, poi):
@@ -157,6 +117,4 @@ def process_traj(dname):  # start from 1
 
 if __name__ == '__main__':
     name = 'NYC'
-    # create_poi(name)
-    # create_data(name)
     process_traj(name)
