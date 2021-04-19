@@ -7,7 +7,7 @@ Thank you for your interest in our work! I want to apologize for uploading the w
 
 The running speed of STAN is extremely low. (We have a huge memory of the location matrix and a long sequence to learn) Try a proportion of users to test the performance. Increase the embed_dim accordingly if using more users.
 
-You should see something on the screen like this:   
+Run "load.py" first and then "train.py". You should see something on the screen like this:   
 100%|██████████| 100/100 [14:32<00:00,  8.72s/it]  
 epoch:27, time:23587.941201210022, valid_acc:[0.18 0.49 0.56 0.67]  
 epoch:27, time:23587.941201210022, test_acc:[0.15 0.46 0.59 0.67]
@@ -35,6 +35,9 @@ A2.3: If the edges can truly reflect the relations between each loaction and eac
 
 Q2.4: What do you mean by setting a unit spatiotemporal embedding?  
 A2.4: ![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/unit_embedding.png)
+
+Q2.5: What does each column/row in NYC.npy mean?  
+A2.5: Each row: [user id, check-in location id, time in seconds].  
 
 Q3: What is the environment to run the code? And version?  
 A3: We use python 3.7.2, CUDA 10.1 and PyTorch 1.7.1. Make sure to install all libs that we import.  
