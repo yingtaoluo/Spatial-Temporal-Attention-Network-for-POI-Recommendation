@@ -36,7 +36,7 @@ Q2.4: What do you mean by setting a unit spatiotemporal embedding?
 A2.4: ![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/unit_embedding.png)
 
 Q2.5: What does each column/row in NYC.npy mean?  
-A2.5: Each row: [user id, check-in location id, time in seconds].  
+A2.5: Each row: [user id, check-in location id, time in hours].  
 
 Q2.6: Can we try a different division of train/dev/test datasets?  
 A2.6: Our goal here is to generalize for the future visits of each user we have known (we do not want to test the model performance on biased past behavior), instead of generalizing to other users whose user-id embeddings are not known to the model. Unlike the golden rules like "better location leads to higher price" that apply to any real estates in the world, each user has personalized behavioral pattern.  
