@@ -1,5 +1,5 @@
 # STAN: Spatial-Temporal-Attention-Network-for-Next-Location-Recommendation
-Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/2102.04095
+Update! The paper is accepted by the Web conference 2021. Paper: https://arxiv.org/abs/2102.04095. Oral: https://www.youtube.com/watch?v=ajNzESvOvzs.
 
 Author Reply: 
 Thank you for your interest in our work! Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. 
