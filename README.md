@@ -2,7 +2,7 @@
 Update! The paper is accepted by the Web conference 2021. https://arxiv.org/abs/2102.04095
 
 Author Reply: 
-Thank you for your interest in our work! I want to apologize for uploading the wrong files. Please use the new .py files in this repository if you downloaded the old files. (Sorry!)
+Thank you for your interest in our work! Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. 
 
 The running speed of STAN is extremely low. (We have a huge memory of the location matrix and a long sequence to learn) Try a proportion of users to test the performance. Increase the embed_dim accordingly if using more users.
 
