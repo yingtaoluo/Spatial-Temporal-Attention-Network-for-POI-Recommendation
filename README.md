@@ -11,8 +11,6 @@ Run "load.py" first and then "train.py". You should see something on the screen 
 epoch:27, time:23587.941201210022, valid_acc:[0.18 0.49 0.56 0.67]  
 epoch:27, time:23587.941201210022, test_acc:[0.15 0.46 0.59 0.67]
 
-![image](https://github.com/yingtaoluo/Spatial-Temporal-Attention-Network-for-POI-Recommendation/blob/master/Cover.png)
-
 I summarize some FAQs:  
 Q1: Can you provide a dataset?  
 A1: Our datasets are collected from the following links. Please feel free to do your own data processing on your model while comparing STAN as baseline.
