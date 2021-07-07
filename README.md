@@ -4,14 +4,15 @@ Update! The paper is accepted by the Web conference 2021. Paper: https://arxiv.o
 Author Reply: 
 Thank you for your interest in our work! Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. 
 
-Because of the inefficient training implementation and the huge memory of the location matrix, the running speed of STAN is extremely low. Unfortunately, the authors will not likely to have time to refine the codes. You can refer to the implementation of masked attention here (https://github.com/yzhao062/PyHealth/blob/master/pyhealth/models/sequence/dipole.py) if you wish to write your own codes. Try a proportion of users to test the performance. Do increase the embed_dim accordingly if using more users.
+## Description
+Because of the inefficient training implementation and the huge memory of the location matrix, the running speed of STAN is extremely low. Unfortunately, the authors will not likely to have time to refine the codes. You can refer to the implementation of masked attention [[here](https://github.com/yzhao062/PyHealth/blob/master/pyhealth/models/sequence/dipole.py)] if you wish to rewrite your own codes. Try a proportion of users to test the performance. Do increase the embed_dim accordingly if using more users.
 
 Run "load.py" first and then "train.py". You should see something on the screen like this:   
 100%|██████████| 100/100 [14:32<00:00,  8.72s/it]  
 epoch:27, time:23587.941201210022, valid_acc:[0.18 0.49 0.56 0.67]  
 epoch:27, time:23587.941201210022, test_acc:[0.15 0.46 0.59 0.67]
 
-I summarize some FAQs:  
+## FAQs
 Q1: Can you provide a dataset?  
 A1: Our datasets are collected from the following links. Please feel free to do your own data processing on your model while comparing STAN as baseline.
 http://snap.stanford.edu/data/loc-gowalla.html;  
