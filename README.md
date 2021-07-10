@@ -5,7 +5,7 @@ Author Reply:
 Thank you for your interest in our work! Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. 
 
 ## Description
-Because of the inefficient training implementation and the huge memory of the location matrix, the running speed of STAN is extremely low. Unfortunately, the authors will not likely to have time to refine the codes. You can refer to the implementation of masked attention [[here](https://github.com/yzhao062/PyHealth/blob/master/pyhealth/models/sequence/dipole.py)] if you wish to rewrite your own codes. Try a proportion of users to test the performance. Do increase the embed_dim accordingly if using more users.
+Because of the huge memory of the location matrix, the running speed of STAN is extremely low. You can refer to the implementation of masked attention [[here](https://github.com/yzhao062/PyHealth/blob/master/pyhealth/models/sequence/dipole.py)] if you wish to rewrite your own codes. Try a proportion of users to test the performance. Do increase the embed_dim accordingly if using more users.
 
 Run "load.py" first and then "train.py". You should see something on the screen like this:   
 100%|██████████| 100/100 [14:32<00:00,  8.72s/it]  
