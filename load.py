@@ -65,7 +65,7 @@ def process_traj(dname):  # start from 1
     # data (?, [u, l, t]), poi (L, [l, lat, lon])
     data = np.load('./data/' + dname + '.npy')
     # add the code below if you are using dividing time into minutes instead of hours
-    data[:, -1] /= 60
+    data[:, -1] = np.array(data[:, -1]/60, dtype=np.int)
     poi = np.load('./data/' + dname + '_POI.npy')
     num_user = data[-1, 0]  # max id of users, i.e. NUM
     data_user = data[:, 0]  # user_id sequence in data
