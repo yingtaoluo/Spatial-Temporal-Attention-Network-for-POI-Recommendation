@@ -5,7 +5,7 @@ from torch.nn import functional as F
 
 seed = 0
 global_seed = 0
-hours = 24*7
+hours = 60*24*7
 torch.manual_seed(seed)
 device = 'cuda'
 
