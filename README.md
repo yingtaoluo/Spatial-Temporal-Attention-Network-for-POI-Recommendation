@@ -2,7 +2,7 @@
 Update! The paper is accepted by the Web conference 2021. Paper: https://arxiv.org/abs/2102.04095. Oral: https://www.youtube.com/watch?v=ajNzESvOvzs.
 
 Author Reply: 
-Thank you for your interest in our work! Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. 
+Thank you for your interest in our work! Thank you for reporting possible bugs and please make sure you are forking the latest repo to avoid eariler bugs. Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. Please feel free to push your fix to bugs by pull requests.
 
 ## Description
 Because of the huge memory of the location matrix, the running speed of STAN is extremely low. You can refer to the implementation of masked attention [[here](https://github.com/yzhao062/PyHealth/blob/master/pyhealth/models/sequence/dipole.py)] if you wish to rewrite your own codes. Try a proportion of users to test the performance. Do increase the embed_dim accordingly if using more users.
