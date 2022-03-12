@@ -2,7 +2,7 @@
 Update! The paper is accepted by the Web conference 2021. Paper: https://arxiv.org/abs/2102.04095. Oral: https://www.youtube.com/watch?v=ajNzESvOvzs or https://www.bilibili.com/video/BV1WL411E7Qm?from=search&seid=7472683569881802215. 
 
 Author Reply: 
-Thank you for your interest in our work! Thank you for reporting possible bugs and please make sure you are forking the latest repo to avoid eariler bugs. Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. Please feel free to push your fix to bugs by pull requests.
+Thank you for your interest in our work! Thank you for reporting possible bugs and please make sure you are forking the latest repo to avoid eariler bugs. Before asking questions regarding the codes or the paper, I strongly recommend you to read the FAQ first. Please feel free to push your fix to bugs by pull requests You can also use the [LibCity(https://github.com/LibCity/Bigscity-LibCity)] version.
 
 ## Description
 Because of the huge memory of the location matrix, the running speed of STAN is extremely low. You can refer to the implementation of masked attention [[here](https://github.com/yzhao062/PyHealth/blob/master/pyhealth/models/sequence/dipole.py)] if you wish to rewrite your own codes. 
