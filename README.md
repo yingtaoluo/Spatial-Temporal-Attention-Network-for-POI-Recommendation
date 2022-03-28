@@ -18,7 +18,7 @@ epoch:27, time:23587.941201210022, test_acc:[0.15 0.46 0.59 0.67]
 Q1: Can you provide a dataset?  
 A1: Our datasets are collected from the following links. Please feel free to do your own data processing on your model while comparing STAN as baseline.
 http://snap.stanford.edu/data/loc-gowalla.html;  
-https://www.ntu.edu.sg/home/gaocong/data/poidata.zip; (Some people mention that this link is invalid, for reason I do not know neither. )
+https://personal.ntu.edu.sg/gaocong/data/poidata.zip;
 http://www-public.imtbs-tsp.eu/~zhang_da/pub/dataset_tsmc2014.zip  
   
 Q2.1: What does it mean "The number of the training set is 𝑚 − 3, with the first 𝑚′ ∈ [1,𝑚 − 3] check-ins as input sequence and the [2,𝑚 − 2]-nd visited location as the label"?  
